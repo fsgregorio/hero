@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from src.database import SessionLocal
-from src.models import Account, Category, AccountCategory, Historical
-from src.ingestion import ingest_data
+from database import SessionLocal
+from models import Account, Category, AccountCategory, Historical
+from ingestion import ingest_data
 import pandas as pd
 
 app = FastAPI()
