@@ -1,0 +1,45 @@
+# 🔹 Arquivos e pastas do ambiente virtual
+venv/
+.env/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 🔹 Logs e arquivos temporários
+*.log
+*.out
+*.err
+*.swp
+.DS_Store
+*.bak
+
+# 🔹 Configurações do VSCode e PyCharm
+.vscode/
+.idea/
+
+# 🔹 Arquivos de credenciais/senhas
+*.env
+secrets.json
+config.yaml
+.envrc
+
+# 🔹 Modelos treinados e checkpoints
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.ckpt
+
+# 🔹 Arquivos do sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 🔹 Arquivos do MacOS
+._*
