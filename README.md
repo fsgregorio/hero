@@ -35,11 +35,16 @@ The database follows **Third Normal Form (3NF)** to ensure data integrity and av
 ## Setup & Running the Application
 
 ### Local Setup
-1. Clone the repository:
-   ```sh
-    git clone https://github.com/fsgregorio/hero.git
-    ```
 
+1. Create and Activate the Virtual Environment:
+   ```sh
+    python -m venv venv
+    ```
+    ``` 
+    venv\Scripts\activate #Windows/Powershell:
+
+    source venv/bin/activate #Linux/Mac
+    ```
 2. Install dependencies::
     ```sh
     pip install -r requirements.txt
@@ -63,7 +68,7 @@ The database follows **Third Normal Form (3NF)** to ensure data integrity and av
 
 ## API Endpoints
 
-FastAPI automatically generates interactive API documentation.
+FastAPI automatically generates interactive API documentation. Check the out the documentation para testar the endpoints.
 You can access it at:
 
 Swagger UI: http://127.0.0.1:8000/docs#/ 
@@ -113,4 +118,4 @@ Run unit tests with:
 
 ## Contact
 Francisco de Sales Gregório Neto
-fsales@gmail.com
+fsales.data@gmail.com
