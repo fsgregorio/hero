@@ -1,17 +1,19 @@
+# Dockerfile for building and running the FastAPI application
+
 FROM python:3.11-slim
 
-# Define o diretório de trabalho dentro do contêiner
+# Set the working directory inside the container
 WORKDIR /main
 
-# Copia os arquivos do projeto para o contêiner
+# Copy project files into the container
 COPY . /main
 
-# Instala dependências do projeto
+# Install project dependencies
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Expõe a porta 8000 para acesso externo
+# Expose port 8000 for external access
 EXPOSE 8000
 
-# Comando para rodar a aplicação
+# Command to run the application
 CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

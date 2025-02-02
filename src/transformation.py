@@ -1,3 +1,13 @@
+"""
+Module for loading and transforming social media account data.
+
+This module provides functions to:
+- Load Parquet data files.
+- Convert timestamps to datetime format.
+- Normalize category data by splitting multiple categories into separate rows.
+- Filter accounts with fewer than 1000 subscribers.
+"""
+
 import pandas as pd
 
 def load_and_transform_data(file_path: str) -> pd.DataFrame:
@@ -28,4 +38,3 @@ if __name__ == "__main__":
     file_path = "data/sample_accounts.parquet"
     transformed_df = load_and_transform_data(file_path)
     print(transformed_df.head())
-
