@@ -1,4 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi import File, UploadFile
+import shutil
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import text
 from .database import SessionLocal
@@ -103,7 +105,21 @@ def get_high_growth_accounts(db: Session = Depends(get_db)):
 
 
 @app.post("/accounts/upload")
-def upload_new_accounts():
-    file_path = "data/add_accounts.parquet"
-    ingest_data(file_path)
-    return {"message": "New accounts data ingested successfully!"}
+async def upload_new_accounts(file: UploadFile = File(...)):
+    """
+    Permite que o usuário envie um arquivo Parquet via POST para ingestão de dados.
+    O arquivo é salvo temporariamente antes de ser processado.
+    """
+    file_path = f"data/{file.filename}"
+
+    # Salvar o arquivo temporariamente
+    with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+
+    # Processar o arquivo com ingestão
+    try:
+        ingest_data(file_path)
+    except Exception as e:
+        return {"error": f"Erro ao processar o arquivo: {e}"}
+
+    return {"message": f"Arquivo {file.filename} carregado e processado com sucesso!"}
