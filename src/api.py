@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import text
-from database import SessionLocal
-from models import Account, Category, AccountCategory, Historical
-from ingestion import ingest_data
+from .database import SessionLocal
+from .models import Account, Category, AccountCategory, Historical
+from .ingestion import ingest_data
 import pandas as pd
 from datetime import datetime, timedelta
 

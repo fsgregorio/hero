@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from api import app as api_app
+from .api import app as api_app
 
 # Criando a instância principal do FastAPI
 app = FastAPI()

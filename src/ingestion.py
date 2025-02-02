@@ -1,9 +1,9 @@
 import pandas as pd
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
-from database import SessionLocal, engine
-from models import Account, Category, AccountCategory, Historical
-from transformation import load_and_transform_data
+from .database import SessionLocal, engine
+from .models import Account, Category, AccountCategory, Historical
+from .transformation import load_and_transform_data
 
 def ingest_data(file_path: str):
     """
