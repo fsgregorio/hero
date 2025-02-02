@@ -29,7 +29,7 @@ The database follows **Third Normal Form (3NF)** to ensure data integrity and av
 - **Historical**: Tracks subscriber count over time.
 
 ### Entity Relationship Diagram (ERD)
-![Descrição da Imagem](hero/img/erd.jpg)
+![Descrição da Imagem](img/erd.jpg)
 
 
 ## Setup & Running the Application
