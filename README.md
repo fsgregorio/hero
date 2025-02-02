@@ -29,7 +29,7 @@ The database follows **Third Normal Form (3NF)** to ensure data integrity and av
 - **Historical**: Tracks subscriber count over time.
 
 ### Entity Relationship Diagram (ERD)
-*(Include an ERD image if possible)*
+![Descrição da Imagem](img/erd.png)
 
 
 ## Setup & Running the Application
@@ -37,8 +37,7 @@ The database follows **Third Normal Form (3NF)** to ensure data integrity and av
 ### Local Setup
 1. Clone the repository:
    ```sh
-    git clone https://github.com/your-repo.git
-    cd your-repo
+    git clone https://github.com/fsgregorio/hero.git
     ```
 
 2. Install dependencies::
@@ -51,7 +50,7 @@ The database follows **Third Normal Form (3NF)** to ensure data integrity and av
     uvicorn src.main:app --reload
     ```
 
-### 🐳 Running with Docker
+### Running with Docker
 1.  Build the Docker container:
     ```sh
     docker build -t my-fastapi-app .
@@ -94,20 +93,24 @@ Run unit tests with:
 - Ensures data consistency.
 - Optimizes query performance.
 
-## Future Improvements
+## Possible evolutions
 
 #### Migrate to PostgreSQL
 - Scalability: Supports larger datasets.
 - Indexing & Performance Optimizations.
 
-Explore DuckDB for Analytical Queries
+#### Explore DuckDB for Analytical Queries
 - Optimized for Columnar Storage.
 - Great for Fast Aggregations.
 
-Database Optimizations
+#### Database Optimizations
 - Indexing strategies for faster queries.
 - Sharding & Replication if migrating to PostgreSQL.
 - Partitioning large tables for performance gains.
 
-Deploy on Cloud
+#### Deploy on Cloud
 - Use AWS Lambda or Google Cloud Run for serverless deployment.
+
+## Contact
+Francisco de Sales Gregório Neto
+fsales@gmail.com
