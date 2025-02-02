@@ -24,6 +24,8 @@ pip-delete-this-directory.txt
 .vscode/
 .idea/
 
+data/
+
 # 🔹 Arquivos de credenciais/senhas
 *.env
 secrets.json
